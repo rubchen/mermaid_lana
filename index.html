@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- reset.css modern-css-reset -->
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="icon" href="img/lana_favicon.PNG">
+  <title>人魚ラナのプチ冒険</title>
+</head>
+
+<body class="background-underwater">
+  <header class="header">
+    <div class="header-link-box">
+      <a class="header-link main-link" href="https://unityroom.com/games/mermaidgame_lana" target="_blank"
+        rel="noopener noreferrer">Unity Loom</a>
+      <a class="header-link main-link" href="/">hoge</a>
+      <a class="header-link main-link" href="/">hogehoge</a>
+      <a class="header-link main-link" href="/">foo</a>
+    </div>
+  </header>
+  <div class="main">
+    <img src="img/background_fish_01.webp" alt="" class="background-fish-01">
+    <img src="img/background_fish_02.webp" alt="" class="background-fish-02">
+    <div class="-bubble">
+      <div class="h1-decoration">
+        <h1 class="h1-image"><img src="img/h1_title.png" alt="人魚ラナのプチ冒険！"></h1>
+        <img class="image-mermaid-silhouette" src="img/mermaid_silhouette.PNG" alt="">
+      </div>
+      <!-- カルーセル -->
+      <div class="carousel-box">
+        <div class="carousel" id="js-carousel">
+          <div class="carousel-image-box">
+            <img class="carousel-image" src="img/gameplay_01.webp" alt="">
+          </div>
+          <div class="carousel-image-box">
+            <img class="carousel-image" src="img/gameplay_02.webp" alt="">
+          </div>
+          <div class="carousel-image-box">
+            <img class="carousel-image" src="img/gameplay_03.webp" alt="">
+          </div>
+          <div class="carousel-image-box">
+            <img class="carousel-image" src="img/gameplay_04.webp" alt="">
+          </div>
+        </div>
+        <!-- ボタン -->
+        <span class="carousel-prev" id="js-prev"></span>
+        <span class="carousel-next" id="js-next"></span>
+        <!-- インジケーター -->
+        <ul class="carousel-indicator" id="js-indicator">
+          <li class="carousel-indicator-list"></li>
+          <li class="carousel-indicator-list"></li>
+          <li class="carousel-indicator-list"></li>
+          <li class="carousel-indicator-list"></li>
+          <li class="carousel-reproduction" id="js-reproduction">
+            <img class="carousel-reproduction-stop carousel-reproduction-active" id="js-reproduction-stop"
+              src="img/stop.webp" alt="">
+            <img class="carousel-reproduction-start" id="js-reproduction-start" src="img/reproduction.webp" alt="">
+          </li>
+        </ul>
+
+      </div>
+      <!-- ゲームプレイ -->
+      <div class="h2-content">
+        <div class="main-h2-box">
+          <img src="img/h2_decoration.webp" alt="" class="main-h2-decoration">
+          <div>
+            <h2 class="main-h2">ゲームプレイ</h2>
+            <div class="main-h2-line"></div>
+          </div>
+        </div>
+        <iframe class="gameplay-iframe" src="MermaidGame/index.html"></iframe>
+        <p class="main-text">ゲーム画面をクリックかタップすることで遊べます</p>
+        <p class="main-text"><a class="main-link" target="_blank" rel="noopener noreferrer"
+            href="https://unityroom.com/games/mermaidgame_lana">UnityRoom</a>でも遊べます</p>
+        <h3 class="main-h3">操作方法</h3>
+        <div>
+          <p class="operation-button operation-up">↑</p>
+          <div>
+            <p class="operation-button operation-left">←</p>
+            <p class="operation-button operation-down">↓</p>
+            <p class="operation-button operation-right">→</p>
+          </div>
+          <div class="mt1rem">
+            <p class="main-text">矢印キーで操作します。</p>
+            <p class="main-text">スマートフォンの方は画面に出てくる矢印キーで操作できます。</p>
+            <p class="main-text">詳しい遊び方はゲーム内のチュートリアルをご参照ください</p>
+          </div>
+        </div>
+        <h3 class="main-h3">ハイスコア</h3>
+        <div class="high-score">
+          <p class="main-text high-score-text" id="js-high-score-text" data-score="6886">0</p>
+        </div>
+        <h3 class="main-h3">使用音声</h3>
+        <a href="https://maou.audio/bgm_healing17/" class="main-link link-one-column" target="_blank"
+          rel="noopener noreferrer">音楽:魔王魂</a>
+        <a href="https://youtu.be/gf5iyKUUZUs?feature=shared&t=55" class="main-link link-one-column" target="_blank"
+          rel="noopener noreferrer">水中音:音の素材屋さん【DJやーまん】</a>
+      </div>
+      <div class="background-fish-box">
+        <img src="img/background_fish_02.webp" alt="" class="background-fish-03">
+        <img src="img/background_fish_01.webp" alt="" class="background-fish-04">
+      </div>
+      <!-- ゲーム紹介 -->
+      <div class="h2-content">
+        <div class="flex-box">
+          <div class="content left-content">
+            <div class="main-h2-box">
+              <img src="img/h2_decoration.webp" alt="" class="main-h2-decoration">
+              <div>
+                <h2 class="main-h2" id="game-introduction">ゲーム紹介</h2>
+                <div class="main-h2-line"></div>
+              </div>
+            </div>
+            <div class="fadein-up" id="js-fadein-up">
+              <p class="main-text text-center">
+                人魚のラナは母からもらった貝殻のネックレスを、イワシの群れに巻き込まれて無くしてしまった！<br>
+                ウニと釣り針を避け、コインを取りながらネックレスがあるゴールを目指そう！
+              </p>
+            </div>
+            <div class="h2-content">
+              <div class="accordion-box">
+                <div class="accordion accordion-active js-accordion" id="accordion-child-1">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/lana.webp" alt="">
+                    <p class="accordion-title-text main-text">ラナ</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">人魚</p>
+                      <p class="main-text">イワシの大群に巻き込まれて、貝殻のネックレスを無くした</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion js-accordion" id="accordion-child-2">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/necklace.webp" alt="">
+                    <p class="accordion-title-text main-text">貝殻のネックレス</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">ラナの探し物</p>
+                      <p class="main-text">母親からもらった</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion js-accordion" id="accordion-child-3">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/sea_urchin.webp" alt="ウニ">
+                    <p class="accordion-title-text main-text">ウニ</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">デカい</p>
+                      <p class="main-text">当たると痛い</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion js-accordion" id="accordion-child-4">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/fishing_needle.webp" alt="">
+                    <p class="accordion-title-text main-text">つり針</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">上から急に降ってきたする</p>
+                      <p class="main-text">当たると痛い</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion js-accordion" id="accordion-child-5">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/coin.webp" alt="">
+                    <p class="accordion-title-text main-text">コイン</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">どういう原理で浮いているのかなど、存在自体に謎が多い</p>
+                      <p class="main-text">なぜか取るといい気分になる気がする</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion js-accordion" id="accordion-child-6">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/fish.webp" alt="">
+                    <p class="accordion-title-text main-text">魚</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">自由に泳いでいる</p>
+                      <p class="main-text">他にも種類がたくさんいる</p>
+                      <p class="main-text">とある都合で直進しかできない</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion js-accordion" id="accordion-child-7">
+                  <div class="accordion-title js-accordion-title">
+                    <img class="accordion-title-image" src="img/hatena.webp" alt="">
+                    <p class="accordion-title-text main-text">???</p>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-content-text">
+                      <p class="main-text">近づくといいことがあるかも.<a class="hatena-text" href="hatena.html">.</a>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- サイドナビ -->
+          <div class="sidenavi pc-onry">
+            <h2 class="main-h2 sidenavi-h2">サイドナビ</h2>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text main-link" href="#game-introduction">ゲーム紹介</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-1">ラナ</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-2">貝殻のネックレス</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-3">ウニ</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-4">つり針</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-5">コイン</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-6">魚</a>
+            </div>
+            <div class="js-sidenavi-text">
+              <a class="sidenavi-text sidenavi-text-child main-link" href="#accordion-child-7">???</a>
+            </div>
+            <img src="img/sidenavi_bubble_01.webp" alt="" class="sidenavi-bubble-01">
+            <img src="img/sidenavi_bubble_02.webp" alt="" class="sidenavi-bubble-02">
+            <img src="img/sidenavi_bubble_03.webp" alt="" class="sidenavi-bubble-03">
+            <div class="sidenavi-border-01"></div>
+            <div class="sidenavi-border-02"></div>
+          </div>
+        </div>
+      </div>
+      <!-- アセット画像 -->
+      <div class="h2-content">
+        <div class="main-h2-box">
+          <img src="img/h2_decoration.webp" alt="" class="main-h2-decoration">
+          <div>
+            <h2 class="main-h2">アセット画像</h2>
+            <div class="main-h2-line"></div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">タイトル画面</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/title_illustration.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">ゲームクリア</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/clear_illustration.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">ゲームオーバー</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/gameover.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">ゲーム内ラナ</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/player_animation.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">背景</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/game_background.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">岩と海藻</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/rock_seaweed.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">魚</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/game_fish.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="javascript:void(0);" class="js-modal-link modal-link main-link">その他</a>
+          <div class="js-modal-window">
+            <div class="modal-window-box">
+              <div class="modal-window">
+                <div class="modal-window-close"></div>
+                <img class="modal-image" src="img/other.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="move-fish-box">
+        <img src="img/background_move_fish_01.webp" alt="" class="move-fish-01">
+        <img src="img/background_move_fish_01.webp" alt="" class="move-fish-02">
+        <img src="img/background_move_fish_01.webp" alt="" class="move-fish-03">
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-background"></div>
+    <img class="footer-background-goal" src="img/goal.webp" alt="">
+  </footer>
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
