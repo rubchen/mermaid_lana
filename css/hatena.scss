@@ -1,0 +1,101 @@
+@use 'main';
+
+.main{
+    margin-bottom: 120px;
+}
+.h1-title-hatena {
+    background: linear-gradient(to right, #e60000, #f39800, #fff100, #009944, #0068b7, #1d2088, #920783);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 3.125rem;
+    display: inline-block;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: main.$color-white;
+    transform: rotate(7deg);
+    margin-top: 50px;
+}
+
+.decoration {
+    &-box {
+        position: relative;
+    }
+
+    &-lana {
+        background-image: url(../img/lana_applause_01.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 450px;
+        height: 450px;
+        position: relative;
+        right: -50vw;
+        bottom: 100px;
+        animation: applause .1s infinite alternate-reverse;
+        z-index: 10;
+    }
+
+    &-coin {
+        position: absolute;
+        z-index: -10;
+        animation: coin-floating-y 2s ease-in-out infinite alternate-reverse;
+    }
+}
+
+.image-text-side {
+    display: inline;
+
+    &-img {
+        width: 40px;
+        display: inline;
+        position: relative;
+        top: 10px;
+    }
+}
+
+@keyframes applause {
+    0% {
+        background-image: url(../img/lana_applause_01.webp);
+    }
+
+    50% {
+        background-image: url(../img/lana_applause_02.webp);
+    }
+
+    100% {
+        background-image: url(../img/lana_applause_03.webp);
+    }
+}
+
+@keyframes coin-floating-y {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+@media screen and (max-width: main.$breakpoint-tab) {
+    .h1-title-hatena{
+        font-size: 2.625rem;
+    }
+    .decoration{
+        &-lana{
+            right: -35vw;
+        }
+    }
+}
+@media screen and (max-width: main.$breakpoint-sp) {
+    .decoration{
+        &-lana{
+            width: 300px;
+            height: 300px;
+            right: -26vw;
+            bottom: 70px;
+        }
+        &-coin{
+            width: 70px;
+        }
+    }
+}
