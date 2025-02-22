@@ -270,8 +270,15 @@ const sidenavi = (scrollNum) => {
       //自分の上の要素の高さを計算
       if (accordion[j].classList.contains("accordion-active")) {
         totalHeight += 195;
+        if (j === 0) {
+          totalHeight += 65;
+          console.log(accordion[j], j);
+        }
       } else {
-        totalHeight += 110;
+        totalHeight += 132;
+        if (j === 0) {
+          totalHeight += 35;
+        }
       }
     }
     //計算した結果を配列に入れる
