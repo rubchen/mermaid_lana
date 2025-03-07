@@ -16,7 +16,6 @@ html {
 
 body {
     width: 100%;
-    max-width: 1530px;
     height: 100%;
     margin: 0;
     overflow-x: clip;
@@ -30,6 +29,7 @@ body {
 .main {
     width: 70%;
     margin: 48px auto 300px;
+    max-width: 1050px;
 
     &-h2 {
         color: $color-white;
