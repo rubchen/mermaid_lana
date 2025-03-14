@@ -19,6 +19,7 @@
 .decoration {
     &-box {
         position: relative;
+        height: 400px;
     }
 
     &-lana {
@@ -27,9 +28,9 @@
         background-size: contain;
         width: 450px;
         height: 450px;
-        position: relative;
-        right: -50vw;
-        bottom: 100px;
+        position: absolute;
+        right: -130px;
+        bottom: 0;
         animation: applause .1s infinite alternate-reverse;
         z-index: 10;
     }
@@ -80,19 +81,14 @@
     .h1-title-hatena{
         font-size: 2.625rem;
     }
-    .decoration{
-        &-lana{
-            right: -35vw;
-        }
-    }
 }
 @media screen and (max-width: main.$breakpoint-sp) {
     .decoration{
         &-lana{
             width: 300px;
             height: 300px;
-            right: -26vw;
-            bottom: 70px;
+            bottom: 0;
+            right: -80px;
         }
         &-coin{
             width: 70px;
